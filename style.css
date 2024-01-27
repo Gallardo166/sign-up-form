@@ -115,6 +115,15 @@ form {
     color: #a4a7ab;
 }
 
+.inputs input:invalid {
+    border-color: #dd5a5a;
+}
+
+.inputs input:focus {
+    border: none;
+    outline: 2px solid rgb(47, 101, 33);
+}
+
 .form-row div {
     display: flex;
     flex-direction: column;
@@ -122,11 +131,16 @@ form {
     justify-content: flex-start;
 }
 
-.form-row label {
+.form-row label, .inputs p {
     color: #5D6063;
     margin-bottom: 6px;
     font-family: Helvetica, sans-serif;
     font-size: 0.8em;
+}
+
+.inputs p {
+    width: 90%;
+    margin-bottom: 24px;
 }
 
 form .button {
@@ -160,6 +174,12 @@ button {
     color: rgb(62, 131, 45);
 }
 
+span.error {
+    font-family: Helvetica, sans-serif;
+    font-size: 0.7rem;
+    margin-top: -5px;
+    color:#dd5a5a;
+}
 
 @media only screen and (min-width: 700px) {
     * {
@@ -230,6 +250,9 @@ button {
     .inputs input {
         width: calc(40px + 20vw);
         height: calc(16px + 2vh);
+    }
+    .inputs p {
+        width: 85%;
     }
     form {
         height: max(calc(100vh - 180px), 400px);
