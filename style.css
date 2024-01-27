@@ -4,9 +4,244 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: norse;
+    src: url("Norse-Bold.otf");
+}
+
+.image a {
+    color: #FFFFFF;
+}
+
 .image {
+    height: calc(18vh + 18vw);
     background-image: url("background-image.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image .logo {
+    width: 100%;
+    position: absolute;
+    top: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 0;
+
+    background-color: rgb(0 0 0 / 40%);
+}
+
+.image img {
+    width: calc(6vh + 8vw);
+}
+
+.image h1 {
+    margin-top: 18px;
+    font-family: norse, "Helvetica", sans-serif;
+    color: #FFFFFF;
+    font-size: calc(6vh + 6vw);
+}
+
+.image p {
+    color: #FFFFFF;
+    font-family: "Helvetica", sans-serif;
+    font-size: 0.6em;
+    position: absolute;
+    bottom: 4%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    width: 90%;
+    margin-top: 20px;
+    background-color: #F6F7F8;
+    border: 1px solid #D6D9DC;
+    border-radius: 3px;
+    padding: 28px;
+    line-height: 1.2;
+}
+
+header p {
+    font-family: Helvetica, sans-serif;
+    color: #5D6063;
+}
+
+header p:last-child {
+    margin-top: 12px;
+}
+
+form {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputs input {
+    color: #5D6063;
+    margin-bottom: 16px;
+    appearance: none;
+    border: 1px solid #D6D9DC;
+    border-radius: 3px;
+    width: 360px;
+    height: 24px;
+    padding: 3px;
+}
+
+.inputs input::placeholder {
+    color: #a4a7ab;
+}
+
+.form-row div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.form-row label {
+    color: #5D6063;
+    margin-bottom: 6px;
+    font-family: Helvetica, sans-serif;
+    font-size: 0.8em;
+}
+
+form .button {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #F6F7F8;
+    padding: 24px;
+    box-shadow: inset 0 0.3em 3px rgb(0 0 0 / 20%);
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+button {
+    background-color: rgb(47, 101, 33);
+    border: 1px solid #D6D9DC;
+    border-radius: 4px;
+    color: white;
+    padding: 16px;
+    flex-grow: 0;
+    align-self: center;
+}
+
+.button h6 {
+    font-family: Helvetica, sans-serif;
+    font-size: 0.8rem;
+    margin-left: 8px;
+}
+
+.button a {
+    color: rgb(62, 131, 45);
+}
+
+
+@media only screen and (min-width: 700px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        display: flex;
+        justify-content:flex-start;
+    }
+    .image {
+        width: 32vw;
+        height: 100vh;
+        background-image: url(background-image.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: left center;
+        background-size: calc(36vh + 37vw);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .image .logo {
+        width: 100%;
+        position: absolute;
+        top: calc(5% + 15vh);
+        padding: 12px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: calc(1vw);
+    }
+    .image img {
+        width: calc(48px + 2vh + 2vw);
+    }
+    .image h1 {
+        font-size: calc(36px + 2vh + 2vw);
+    }
+    .image p {
+        position: fixed;
+        bottom: 2%;
+    }
+    header {
+        width: 85%;
+    }
+    .form {
+        width: 68vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .inputs {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+    }
+    .form-row {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10%;
+    }
+    .inputs input {
+        width: calc(40px + 20vw);
+        height: calc(16px + 2vh);
+    }
+    form {
+        height: max(calc(100vh - 180px), 400px);
+        overflow: scroll;
+    }
+    form .button {
+        flex-grow: 1;
+        padding: 42px;
+        display: flex;
+        flex-direction: column;
+    }
+    button {
+        align-self: flex-start;
+    }
 }
